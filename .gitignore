@@ -1,0 +1,16 @@
+testrun/
+output/
+venv/
+temp/
+.rpa/
+.idea/
+.ipynb_checkpoints/
+.virtual_documents/
+*/.ipynb_checkpoints/*
+geckodriver*
+__pycache__
+.vscode
+.DS_Store
+*.pyc
+*.zip
+*.exe
