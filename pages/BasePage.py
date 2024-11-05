@@ -58,7 +58,6 @@ class BasePage(object):
                 EC.visibility_of_element_located(locator),
                 EC.element_to_be_clickable(locator)
             ))
-            # element = wait_for_element.until(EC.element_to_be_clickable(locator))
 
             action = ActionChains(self.WEB_DRIVER)
             action.click(element[0])
@@ -102,10 +101,6 @@ class BasePage(object):
         try:
             wait_for_element = WebDriverWait(self.WEB_DRIVER, timeout, ignored_exceptions=(ElementNotVisibleException))
             return wait_for_element.until(EC.presence_of_element_located(locator))
-            # return wait_for_element.until(EC.all_of(
-            #     EC.presence_of_element_located(locator),
-            #     EC.visibility_of_element_located(locator)
-            # ))
         except Exception:
             self.logger.debug(traceback.format_exc())
 
